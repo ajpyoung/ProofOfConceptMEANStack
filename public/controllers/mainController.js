@@ -143,9 +143,9 @@
 				//var GeoJSON_Data = layer.toGeoJSON();
 				//$scope.saveCoordinates(null,GeoJSON_Data);
 				//GeoJSON_Data.tracker = new Date()/1000;
-				console.log($scope.geojson);
+				//console.log($scope.geojson);
 				sharedData.addinMemoryJSON(GeoJSON_Data);
-				console.log(JSON.stringify(GeoJSON_Data));
+				//console.log(JSON.stringify(GeoJSON_Data));
 			});
 		});
 
@@ -192,9 +192,9 @@
 								}
 								break;
 						}
-						console.log(data[x]);
+						//console.log(data[x]);
 					}
-					console.log($scope);
+					//console.log($scope);
 				}).
 				error(function(data){
 					console.log('Error '+target+' : '+data);
@@ -276,7 +276,7 @@
 					}else{
 						$scope.checkedMemoryItems.splice($scope.checkedMemoryItems.indexOf(event.target.value),1);
 					}
-					console.log($scope.checkedMemoryItems);
+					//console.log($scope.checkedMemoryItems);
 					break;
 				case 'indb':
 					break;
