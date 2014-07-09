@@ -1,0 +1,24 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title"><span ng-show="inmemory.length > 0">({{inmemory.length}})</span> Data Not Saved in DB <button ng-click="saveCheckedMemory();">Save Checked Items</button></h3>
+  </div>
+  <div class="div-table-content">
+    <table class="table">
+      <tbody>
+        <tr ng-repeat="tempData in inmemory track by $index">
+          <td ng-hide="inmemory.length > 0">
+            No Data as of the moment
+          </td>
+          <td>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <input name="inmemorychkbx" type="checkbox" value='{{$index}}' ng-click="checkedItem('memory',$index,$event);">
+              </span>
+              <textarea class="form-control" readonly="readonly">{{tempData}}</textarea>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

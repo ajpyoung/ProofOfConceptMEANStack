@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html lang="en" ng-app="mainDemoController">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Node.js, Angular.js, Express.js, and MongoDB proof of concept</title>
+	<!-- load dependencies first before loading angular -->
+	<script src="lib/leaflet-0.7.3/leaflet.js"></script>
+
+	<script src="lib/angular-1.2.19/angular.min.js"></script>
+	<script src="lib/angular-leaflet/angular-leaflet-directive.min.js"></script>
+	<script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<!-- <script src="./lib/jquery/jquery-2.1.1.min.js"></script>-->
+	
+	
+	<!-- polygon add edits -->
+	<script src="lib/leaflet.draw/dist/leaflet.draw.js"></script>
+	
+	<!-- link to main controller -->
+	<script src="controllers/mainController.js"></script>
+	<script src="controllers/displayDirectives.js"></script>
+	<script src="controllers/myDataServices.js"></script>
+
+	<!-- <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="lib/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="lib/leaflet.draw/dist/leaflet.draw.css" />
+	<link rel="stylesheet" type="text/css" href="css/personalCSS.css" />
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body ng-controller="mainPageController">
+	<div class="container" ng-controller="LayersSimpleController">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="jumbotron text-center">
+					<h1>
+						Poc for MEAN stack
+					</h1>
+					<h2>by: Engr. Andrew John P. Young</h2>
+					<p>
+						This is basically is a page that leverages 
+						the power of Node.js, MongoDB, Express.js, 
+						and Angular.js in the most simple way I know
+					</p>
+					<span>Lat:<span ng-bind="center.lat"></span></span>&nbsp;<span>Lng:<span ng-bind="center.lng"></span></span>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-6 column">
+						<leaflet center="center" geojson="geojson" paths="paths" layers="layers" markers="markers" defaults="defaults" style="width:470px;height:300px;" class="container" controls="controls"></leaflet>
+					</div>
+					<div class="col-md-6 column">
+						<in-memoryjson></in-memoryjson>
+						<in-dbjson></in-dbjson>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

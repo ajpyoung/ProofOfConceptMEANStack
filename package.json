@@ -1,0 +1,22 @@
+{
+  "name": "sampleCRUDwithGeospatial",
+  "version": "0.0.0",
+  "description": "Proof of Concept to show clients that I can do MEAN stack development",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.5.0",
+    "mongojs": "^0.13.0",
+    "morgan": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ajpyoung_ph@bitbucket.org/ajpyoung_ph/samplemeanstack.git"
+  },
+  "author": "Andrew John P. Young",
+  "license": "ISC"
+}

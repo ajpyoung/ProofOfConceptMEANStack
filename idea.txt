@@ -1,0 +1,13 @@
+leveraging MongoDB's geospatial capabilities
+map visualization using leaf.js
+create polygon - plugin https://github.com/scripter-co/leaflet-plotter to create our polygon 
+save polygon
+edit polygon - https://github.com/tkrajina/leaflet-editable-polyline/
+looks like https://github.com/Leaflet/Leaflet.draw is more complete
+
+create polygon
+save polygon
+auto refresh view
+on-demand calculation distance between point to point
+on-demand calculation within geo-polygon
+on-demand gather points within radius of point
